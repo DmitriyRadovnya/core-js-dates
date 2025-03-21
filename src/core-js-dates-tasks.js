@@ -211,9 +211,9 @@ function getCountWeekendsInMonth(month, year) {
   const daysInMonth = new Date(year, month, 0).getDate();
   let countWeeksDays = 0;
 
-  for (let i = 0; i < daysInMonth; i += 1) {
+  for (let i = 1; i <= daysInMonth; i += 1) {
     const day = new Date(year, month - 1, i).getDay();
-    if (day === 5 || day === 6) {
+    if (day === 0 || day === 6) {
       countWeeksDays += 1;
     }
   }
